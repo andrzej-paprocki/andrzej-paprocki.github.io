@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ваше Имя | Frontend Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #bbb;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* 🔥 Главное изменение здесь */
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #222;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    /* 🔥 Кнопки прижимаются вниз */
+    .buttons {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      background: #00adb5;
+      color: #000;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ваше Имя</h1>
+  <p>Frontend Developer | HTML • CSS • JavaScript</p>
+</header>
+
+<section>
+  <h2>Обо мне</h2>
+  <p>
+    Я начинающий frontend-разработчик. Создаю адаптивные сайты,
+    работаю с JavaScript и люблю чистый аккуратный код.
+  </p>
+</section>
+
+<section>
+  <h2>Мои проекты</h2>
+
+  <div class="projects">
+
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>parallel-reading-demo</p>
+      <div class="buttons">
+        <a href="https://andrzej-paprocki.github.io/parallel-reading-demo/">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Todo App</h3>
+      <p>Приложение для управления задачами.</p>
+      <div class="buttons">
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Gallery</h3>
+      <p>Галерея изображений с JS-фильтрацией.</p>
+      <div class="buttons">
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Контакты</h2>
+  <p>Email: your@email.com</p>
+  <p>GitHub: https://github.com/yourusername</p>
+</section>
+
+<footer>
+  © 2026 Ваше Имя
+</footer>
+
+</body>
+</html>
