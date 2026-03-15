@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrzej Paprocki</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrzej Paprocki</title>
+
   <style>
     body {
       margin: 0;
@@ -47,16 +48,54 @@
 
       display: flex;
       flex-direction: column;
-      min-height: 220px;
     }
 
     .card:hover {
-      /* transform: translateY(-5px); */
-      background: rgba(255, 255, 255, .2);
+      background: rgba(255,255,255,.2);
     }
 
     .card h3 {
       margin-top: 0;
+    }
+
+
+
+    /* VIDEO */
+
+    .video-wrapper {
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+  /*  @media (max-width: 600px) {
+
+      .video-wrapper video {
+        width: 100vw;
+      }
+
+    }*/
+
+    .video-wrapper video {
+      width: 50vw;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      cursor: none;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .video-wrapper video {
+        width: 100%;
+      }
+
     }
 
     .buttons {
@@ -87,84 +126,100 @@
       color: #777;
       font-size: 14px;
     }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-    }
   </style>
 </head>
-  
+
 <body>
-    <header>
-      <h1>Andrzej Paprocki</h1>
-      <p>HTML • CSS • JavaScript • Python</p>
-    </header>
-  
-    <section>
-      <h2>About me</h2>
-      <p>
-      I like creating useful software solutions using HTML, CSS, and JavaScript.
-      </p>
-    </section>
-  
-    <section>
-      <h2>My projects</h2>
-  
-      <div class="projects">
-        <div class="card">
-          <h3>Reader with Translation & Speech</h3>
-          <p>The reader speaks sentences aloud and displays their translation. 
-            It also allows you to pronounce a selected word. You can change the color scheme, font sizes, font colors, and more.
-            Live demo using an excerpt from The Death of Achilles by Boris Akunin.
-          </p>
-          <div class="buttons">
-            <a href="https://andrzej-paprocki.github.io/parallel-reading-demo/">Live Demo</a>
-            <a href="https://github.com/andrzej-paprocki/parallel-reading-demo">GitHub</a>
-          </div>
-      </div>
-  
-      <div class="card">
-        <h3>Video Player with Advanced Features</h3>
-        <p>The player can smoothly slow down or speed up playback, loop a track, and quickly return to the normal playback speed.
-          Live demo using an excerpt from The Walk in Amnesia by O. Henry.
-        </p>
-        <div class="buttons">
-          <a href="https://andrzej-paprocki.github.io/player-demo">Live Demo</a>
-          <a href="https://github.com/andrzej-paprocki/player-demo">GitHub</a>
-        </div>
-      </div>
-  
-      <div class="card">
-        <h3>First-Person Browser Shooting Gallery Game</h3>
-        <p>Shooter. You can change the number of targets and bullets.</p>
-        <div class="buttons">
-          <a href="https://andrzej-paprocki.github.io/shooting-range-demo/">Live Demo</a>
-          <a href="https://github.com/andrzej-paprocki/shooting-range-demo">GitHub</a>
-        </div>
-      </div>
-      </div>
-    </section>
-  
-    <section>
-      <h2>Contacts</h2>
-      <p>Email: andrzej.k.paprocki@gmail.com</p>
-    </section>
 
-  </body>
+<header>
+<h1>Andrzej Paprocki</h1>
+<p>HTML • CSS • JavaScript • Python</p>
+</header>
+
+
+<section>
+<h2>About me</h2>
+<p>
+I like creating useful software solutions using HTML, CSS, and JavaScript.
+</p>
+</section>
+
+
+<section>
+<h2>My projects</h2>
+
+<div class="projects">
+
+
+<div class="card">
+  <h3>Reader with Translation & Speech</h3>
+
+  <p>The reader speaks sentences aloud and displays their translation. 
+    It also allows you to pronounce a selected word. You can change the color scheme, font sizes, font colors, and more.
+    Live demo using an excerpt from The Death of Achilles by Boris Akunin.
+  </p>
+
+  <div class="video-wrapper">
+    <video controls autoplay muted loop playsinline>
+      <source src="video/01_reader.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="buttons">
+    <a href="https://andrzej-paprocki.github.io/parallel-reading-demo/">Live Demo</a>
+    <a href="https://github.com/andrzej-paprocki/parallel-reading-demo">GitHub</a>
+  </div>
+</div>
+
+
+<div class="card">
+  <h3>Video Player with Advanced Features</h3>
+
+  <p>The player can smoothly slow down or speed up playback, loop a track, and quickly return to the normal playback speed.
+    Live demo using an excerpt from The Walk in Amnesia by O. Henry.
+  </p>
+
+  <div class="video-wrapper">
+    <video controls autoplay muted loop playsinline>
+      <source src="video/02_player.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="buttons">
+    <a href="https://andrzej-paprocki.github.io/player-demo">Live Demo</a>
+    <a href="https://github.com/andrzej-paprocki/player-demo">GitHub</a>
+  </div>
+</div>
+
+
+<div class="card">
+  <h3>First-Person Browser Shooting Gallery Game</h3>
+
+  <p>
+  Shooter. You can change the number of targets and bullets.
+  </p>
+
+  <div class="video-wrapper">
+    <video controls autoplay muted loop playsinline>
+      <source src="video/03_shooting.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="buttons">
+    <a href="https://andrzej-paprocki.github.io/shooting-range-demo/">Live Demo</a>
+    <a href="https://github.com/andrzej-paprocki/shooting-range-demo">GitHub</a>
+  </div>
+</div>
+
+
+</div>
+</section>
+
+
+<section>
+<h2>Contacts</h2>
+<p>Email: andrzej.k.paprocki@gmail.com</p>
+</section>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
