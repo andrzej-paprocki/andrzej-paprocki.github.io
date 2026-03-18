@@ -14,6 +14,16 @@
       line-height: 1.2;
     }
 
+    h3 {
+      line-height: 1.5;
+      height: calc(1.25em * 2); /* 2 lines */
+    }
+
+    .card-p {
+        line-height: 1.25;
+        height: calc(1.25em * 7); /* 7 lines */
+    }
+
     header {
       text-align: center;
       padding: 60px 20px;
@@ -37,7 +47,8 @@
     }
 
     section {
-      max-width: 1000px;
+      /*max-width: 1000px;*/
+      max-width: 80%;
       margin: 40px auto;
       padding: 0 20px;
     }
@@ -70,11 +81,27 @@
 
     /* VIDEO */
 
+/*
     .video-wrapper {
       margin: 15px 0;
       display: flex;
       justify-content: center;
     }
+*/
+
+
+
+.video-wrapper {
+  margin: 20px 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+
+
+
 
   /*  @media (max-width: 600px) {
 
@@ -84,6 +111,8 @@
 
     }*/
 
+
+/*
     .video-wrapper video {
       width: 50vw;
       max-width: 100%;
@@ -91,6 +120,16 @@
       border-radius: 8px;
       cursor: none;
     }
+*/
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
 
     /* MOBILE */
 
@@ -163,7 +202,7 @@ I like creating useful software solutions using HTML, CSS, and JavaScript.
 <div class="card">
   <h3>Reader with Translation & Speech</h3>
 
-  <p>The reader speaks sentences aloud and displays their translation. 
+  <p class="card-p">The reader speaks sentences aloud and displays their translation. 
     It also allows you to pronounce a selected word. You can change the color scheme, font sizes, font colors, and more.
     Live demo using an excerpt from The Death of Achilles by Boris Akunin.
   </p>
@@ -184,7 +223,7 @@ I like creating useful software solutions using HTML, CSS, and JavaScript.
 <div class="card">
   <h3>Video Player with Advanced Features</h3>
 
-  <p>The player can smoothly slow down or speed up playback, loop a track, and quickly return to the normal playback speed.
+  <p class="card-p">The player can smoothly slow down or speed up playback, loop a track, and quickly return to the normal playback speed.
     Live demo using an excerpt from The Walk in Amnesia by O. Henry.
   </p>
 
@@ -204,7 +243,7 @@ I like creating useful software solutions using HTML, CSS, and JavaScript.
 <div class="card">
   <h3>First-Person Browser Shooting Gallery Game</h3>
 
-  <p>
+  <p class="card-p">
   A shooter. You can specify the number of targets and ammo.
   </p>
 
@@ -217,6 +256,26 @@ I like creating useful software solutions using HTML, CSS, and JavaScript.
   <div class="buttons">
     <a href="https://andrzej-paprocki.github.io/shooting-range-demo/">Live Demo</a>
     <a href="https://github.com/andrzej-paprocki/shooting-range-demo">GitHub</a>
+  </div>
+</div>
+
+
+<div class="card">
+  <h3>Phrasal Verbs</h3>
+
+  <p class="card-p">
+  An application for learning and practicing phrasal verbs. It is styled after Raymond Murphy’s textbook English Grammar in Use. One of the sections from this textbook is used.
+  </p>
+
+  <div class="video-wrapper">
+    <video controls autoplay muted loop playsinline>
+      <source src="video/03_shooting.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="buttons">
+    <a href="https://andrzej-paprocki.github.io/phrasal-verbs-demo/">Live Demo</a>
+    <a href="https://github.com/andrzej-paprocki/phrasal-verbs-demo">GitHub</a>
   </div>
 </div>
 
